@@ -1,0 +1,25 @@
+<web-app>
+  <servlet> 
+    <servlet-name>EasyServlet</servlet-name> 
+    <servlet-class>EasyServlet</servlet-class> 
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>EasyServlet</servlet-name>
+    <url-pattern>/EasyServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GodServlet</servlet-name>
+    <servlet-class>GodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GodServlet</servlet-name>
+    <url-pattern>/GodServlet</url-pattern>
+  </servlet-mapping>
+  <auth-constraint>
+    <role-name>tomcat</role-name>
+  </auth-constraint>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+</web-app>
