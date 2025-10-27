@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>新規登録/GodSNS</title>
+    <link rel="stylesheet" href="jsp/css/style.css">
+    <link rel="stylesheet" href="jsp/css/new.css">
+    <link rel="icon" href="jsp/image/favicon.ico">
+    <script language="JavaScript">
+      <!--
+	 function submitCheck(){
+	 if(document.forms[0].id.value == "" || document.forms[0].name.value == "" || document.forms[0].password1.value == "" || document.forms[0].password2.value == "" || document.forms[0].icon.value == ""){
+         alert("入力漏れがあります");
+         return false;
+	 }
+	 else if(document.forms[0].password1.value != document.forms[0].password2.value){
+         alert("入力されたパスワードが一致していません");
+         return false;
+	 }
+
+　　　　　if(document.forms[0].id.value == document.forms[0].password1.value){
+         alert("学生番号とパスワードが同じなのは危険です\n違うパスワードを設定してください");
+         document.forms[0].password1.value = "";
+         document.forms[0].password2.value = "";
+         return false;
+	 }
+
+         if(window.confirm( '以下のアカウントを作成しますか？\n\n学生番号：'+document.forms[0].id.value+'\n 名   前  ：'+document.forms[0].name.value+'\n\n名前、アイコン、パスワードは後で変更できます')){
+	 return true;
+	 }
+	 else{
+	 window.alert('キャンセルされました');
+	return false;
+	 }
+	 }
+	-->
+    </script>
+    
+  </head>
+  <body>
+    <center>
+      <header>
+	<h1>
+	  <table border="0" style="font: 12px; width: 100%;">
+	    <tr>
+	      <td align="center"><img src="jsp/image/logo.png"></td>
+	    </tr>
+	  </table>
+	</h1>
+      </header>
+      <br>
+      <h2>新規登録</h2>
+      
+      <p>下記の項目を入力してください</p>
+      <hr>
+      <form action="GodServlet" method="POST" onSubmit="return submitCheck()">
+	
+	<p>お好きなアイコンをクリックして下さい</p>
+	<div>
+	  <label data-icon="1"><input type="radio" id="icon" name="icon" value="boy" checked><img></label>
+	  <label data-icon="2"><input type="radio" id="icon" name="icon" value="girl"><img></label>
+	</div>
+	<table style="text-align:right;">
+	  <tr>
+	    <td>学生番号(uもしくはgから始まるもの)</td>
+	    <td><input type="text" id="id" name="id" placeholder="学生番号" maxlength="20"></td>
+	  </tr>
+	  <tr>
+	    <td>名前(20文字まで)</td>
+	    <td><input type="text" id="name" name="name" placeholder="名前(20文字まで)" maxlength="20"></td>
+	  </tr>
+	  <tr>
+	    <td>パスワード</td>
+	    <td><input type="password" id="password1" name="password1" placeholder="パスワード"></td>
+	  </tr>
+	  <tr>
+	    <td>パスワード(確認用)</td>
+	    <td><input type="password" id="password2" name="password2" placeholder="パスワード(確認用)"></td>
+	  </tr>
+	  <input type="hidden" id="command" name="command" value="create">
+	  <tr>
+	    <td></td>
+	    <td style="text-align:center;"><input type="submit" value="登録"></td>
+	  </tr>
+	</table>
+      </form>
+    </center>
+  </body>
+</html>

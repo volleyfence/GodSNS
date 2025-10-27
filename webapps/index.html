@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ログイン/GodSNS</title>
+    <link rel="stylesheet" href="jsp/css/style.css">
+    <link rel="icon" href="jsp/image/favicon.ico">
+    <script language="JavaScript">
+      <!--
+	 function submitCheck(){
+	 if(document.forms[0].id.value == "" || document.forms[0].password.value == ""){
+         alert("入力漏れがあります");
+         return false;
+	 }
+	 return true;
+	 }
+	-->
+    </script>
+
+  </head>
+  <body>
+    <center>
+      <header>
+	<h1>
+	  <table border="0" style="font: 12px; width: 100%;">
+	    <tr>
+	      <td align="center"><img src="jsp/image/logo.png"></td>
+	    </tr>
+	  </table>
+	</h1>
+      </header>
+      <br>
+      <br>
+      <h2>ログイン</h2>
+      <p>学生番号とパスワードを入力してログインしてください</p>
+      <form action="GodServlet" method="POST" onSubmit="return submitCheck()">
+	<p>学生番号 <input type="text" id="id" name="id" placeholder="学生番号"></p>
+	<p>パスワード <input type="password" id="password" name="password" placeholder="パスワード"></p>
+	<input type="hidden" id="command" name="command" value="login">
+	<p><input type="submit" value="ログイン"></p>
+      </form>
+      <a href="new.html">初めての方はこちら</a>
+      <br>
+    </center>
+  </body>
+</html>
