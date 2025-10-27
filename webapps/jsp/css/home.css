@@ -1,0 +1,81 @@
+body{
+    height: 93%;
+}
+
+.home_wrap{
+    display:table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 25px 0;
+}
+
+#picture{
+    margin-right: 1%;
+}
+
+.home_top{
+    display: table-cell;;
+    width: 49%;
+    border-radius: 30px;
+    border: 2px solid black;
+    overflow: auto;
+    background-color: white;
+}
+
+section{
+    width: 90%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+.ranking_wrap{
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+    padding: 0 10px;
+    border-radius: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #98fb98
+    
+}
+
+.ranking{
+    width: 90%;
+    height: 85%;
+    border: 1px solid black;
+    overflow: auto;
+    background-color: white;
+}
+
+div.box{
+    background: #66cdaa;
+    width:35%;
+    height: auto;
+    float: none;
+    font-size:12px;
+}
+
+div.out{
+    background-color: #66cdaa;
+    width:100%;
+    height: auto;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+#smword {
+    position:relative;
+    margin: 0 0 -140px;
+}
+
+#smword select {
+    display:none;
+    position:absolute;
+    top:0px;
+}
+
+#smword select.on {
+    display:block;
+}
